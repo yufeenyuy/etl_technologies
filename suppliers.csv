@@ -1,0 +1,51 @@
+supplier_id,company_name,street,house_number,zip_code,state,company_type,company_size
+SUP0001,Henschel Hamann OHG mbH,Hans-Erich-Wohlgemut-Straße,139,27777,Hessen,Retailer,Medium
+SUP0002,Bruder GmbH & Co. KG,Valentine-Kruschwitz-Straße,1,70703,Saarland,Service Provider,Medium
+SUP0003,Hellwig GmbH,Metin-Schmiedecke-Ring,188,98424,Berlin,Distributor,Small
+SUP0004,Bender,Zorbachweg,159,02740,Sachsen-Anhalt,Retailer,Large
+SUP0005,Zänker Werner GmbH,Stanislav-Metz-Straße,62,59062,Baden-Württemberg,Retailer,Large
+SUP0006,Henschel Stiftung & Co. KG,Grein Grothallee,17,64614,Schleswig-Holstein,Service Provider,Medium
+SUP0007,Jopich Scheibe GmbH & Co. KGaA,Egbert-Preiß-Platz,49,98491,Niedersachsen,Service Provider,Large
+SUP0008,Trapp,Beerstr.,128,50493,Bremen,Service Provider,Small
+SUP0009,Wohlgemut Mälzer GmbH,Ferenc-Eigenwillig-Allee,157,94612,Brandenburg,Retailer,Medium
+SUP0010,Trupp KG,Gertrude-Döhn-Ring,105,85340,Baden-Württemberg,Retailer,Small
+SUP0011,Briemer,Hedy-Mende-Straße,25,23984,Thüringen,Service Provider,Large
+SUP0012,Gerlach Schweitzer AG & Co. KGaA,Kruschwitzweg,18,87188,Bremen,Manufacturer,Small
+SUP0013,Haase GmbH & Co. KG,Bohlanderring,46,16806,Berlin,Manufacturer,Small
+SUP0014,Gute,Ruppertweg,28,64799,Niedersachsen,Wholesaler,Small
+SUP0015,Barth Weller OHG mbH,Pieperstraße,26,94963,Mecklenburg-Vorpommern,Manufacturer,Large
+SUP0016,Scholl GmbH & Co. KG,Hans-Wolfgang-Kroker-Gasse,165,80926,Berlin,Wholesaler,Large
+SUP0017,Kühnert Eigenwillig AG,Severin-Junitz-Ring,126,78645,Thüringen,Service Provider,Large
+SUP0018,Preiß,Junitzring,180,75124,Thüringen,Service Provider,Medium
+SUP0019,Höfig Adolph AG,Reginald-Pruschke-Straße,13,86824,Bayern,Retailer,Small
+SUP0020,Boucsein Liebelt GmbH,Hermighausenring,156,22444,Berlin,Manufacturer,Small
+SUP0021,Schacht,Hübelgasse,54,33868,Sachsen-Anhalt,Wholesaler,Small
+SUP0022,Peukert e.G.,Marzena-Junck-Straße,120,17036,Hessen,Manufacturer,Medium
+SUP0023,Scholtz GmbH,Fliegnerplatz,143,02050,Mecklenburg-Vorpommern,Wholesaler,Medium
+SUP0024,Schlosser e.G.,Weinholdgasse,182,49096,Berlin,Manufacturer,Large
+SUP0025,Mülichen,Ruppertstraße,69,45284,Brandenburg,Service Provider,Small
+SUP0026,Klotz GmbH,Putzgasse,188,50735,Sachsen,Manufacturer,Medium
+SUP0027,Noack,Pechelgasse,20,73940,Rheinland-Pfalz,Distributor,Large
+SUP0028,Schottin,Fridolin-Sontag-Straße,25,29442,Bayern,Manufacturer,Large
+SUP0029,Conradi GmbH,Mehmet-Pölitz-Ring,60,73420,Mecklenburg-Vorpommern,Service Provider,Medium
+SUP0030,Rose Stiftung & Co. KGaA,Stadelmannstraße,49,48675,Saarland,Distributor,Large
+SUP0031,Sontag GmbH,Anika-Löffler-Allee,169,82308,Bremen,Distributor,Large
+SUP0032,Juncken,Textorstr.,161,19623,Mecklenburg-Vorpommern,Distributor,Large
+SUP0033,Lorch AG,Ullmannstr.,192,94276,Thüringen,Service Provider,Medium
+SUP0034,Plath Häring AG,Gröttnerweg,192,66293,Berlin,Manufacturer,Large
+SUP0035,Davids Radisch e.V.,Waldemar-Reuter-Weg,148,42655,Nordrhein-Westfalen,Retailer,Large
+SUP0036,Scholtz Rogge KG,Sybille-Linke-Platz,118,27237,Brandenburg,Wholesaler,Small
+SUP0037,Scholz Paffrath KG,Gereon-Geißler-Platz,43,90065,Niedersachsen,Distributor,Large
+SUP0038,Riehl,Blümelweg,103,77954,Berlin,Service Provider,Medium
+SUP0039,Zorbach,Linkestraße,169,53981,Bayern,Distributor,Large
+SUP0040,Weiß Häring GmbH & Co. KG,Nikolaos-Säuberlich-Gasse,154,79089,Nordrhein-Westfalen,Wholesaler,Medium
+SUP0041,Pergande Schlosser e.G.,Geiselstraße,81,84887,Sachsen-Anhalt,Service Provider,Medium
+SUP0042,Pruschke AG,Veronique-Bachmann-Allee,96,61239,Sachsen,Wholesaler,Large
+SUP0043,Dörr,Erdal-Schüler-Allee,111,51881,Bremen,Retailer,Large
+SUP0044,Seifert,Sölzerallee,62,82070,Sachsen,Service Provider,Large
+SUP0045,Trubin Wesack KG,Pascale-Drubin-Gasse,55,92372,Bremen,Wholesaler,Large
+SUP0046,Röhrdanz auch Schlauchin GbR,Karl-Trapp-Weg,191,49703,Rheinland-Pfalz,Retailer,Medium
+SUP0047,Linke GmbH & Co. KGaA,Miesstr.,116,83355,Schleswig-Holstein,Wholesaler,Medium
+SUP0048,Neuschäfer GmbH & Co. KG,Joanna-Ditschlerin-Platz,1,15550,Rheinland-Pfalz,Manufacturer,Medium
+SUP0049,Stey Beckmann GmbH,Franka-Davids-Weg,153,99384,Niedersachsen,Manufacturer,Large
+SUP0050,Beyer Jockel GmbH,Eggert-Buchholz-Ring,35,47012,Mecklenburg-Vorpommern,Retailer,Small
