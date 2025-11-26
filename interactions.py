@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timedelta
 
 # Set seed for reproducibility
-SEED = 42
+SEED = 25
 random.seed(SEED)
 
 # Number of interactions

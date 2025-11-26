@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from faker import Faker
 
 # Set seed for reproducibility across all random generators
-SEED = 42
+SEED = 25
 random.seed(SEED)
 Faker.seed(SEED)
 
@@ -153,19 +153,19 @@ def rand_product_name(category: str, subcategory: str) -> str:
 def rand_quantity() -> int:
     return random.randint(1, 5000)
 
-# Helper function for randomly allocating prices in a given range
+# Helper function for randomly allocating prices in a given range (capped at 210)
 def rand_price(category: str) -> float:
     ranges = {
-        "Electronics": (50, 2000),
-        "Home & Kitchen": (10, 800),
-        "Office": (5, 1000),
-        "Sports": (10, 1000),
-        "Beauty": (2, 400),
-        "Automotive": (10, 1500),
-        "Toys": (5, 300),
-        "Grocery": (1, 200),
+        "Electronics": (50, 210),
+        "Home & Kitchen": (10, 210),
+        "Office": (5, 210),
+        "Sports": (10, 210),
+        "Beauty": (2, 210),
+        "Automotive": (10, 210),
+        "Toys": (5, 210),
+        "Grocery": (1, 210),
     }
-    low, high = ranges.get(category, (5, 500))
+    low, high = ranges.get(category, (5, 210))
     return round(random.uniform(low, high), 2)
 
 # Allocate varying row counts per supplier_id
@@ -272,7 +272,7 @@ all_products = [f"PROD{str(i).zfill(5)}" for i in range(1, 3001)]
 active_products = all_products
 
 MIN_QTY, MAX_QTY = 1, 15
-MIN_PRICE, MAX_PRICE = 5.0, 500.0
+MIN_PRICE, MAX_PRICE = 5.0, 210.0  # Capped at 210
 
 # Start date for transactions
 start_date = datetime(2020, 1, 1)
@@ -280,13 +280,11 @@ start_date = datetime(2020, 1, 1)
 # Output file
 output_file = "sales_table.csv"
 
-# Ensure `inventory.csv` exists. If missing, generate it first.
-if not os.path.exists("inventory.csv"):
-    print("inventory.csv not found — generating inventory now...")
-    rows = generate_rows(NUMBER_ROWS)
-    write_csv(OUTPUT_FILE, rows)
-    print("inventory.csv generated.")
-
+# GENERATE INVENTORY FIRST - every time, to ensure fresh data
+print("Generating inventory...")
+rows = generate_rows(NUMBER_ROWS)
+write_csv(OUTPUT_FILE, rows)
+print(f"✅ Generated {NUMBER_ROWS} rows with {NUM_SUPPLIERS} unique shuffled supplier_ids to {OUTPUT_FILE}")
 
 # Load inventory to get product quantities
 inventory_df = pd.read_csv("inventory.csv")
@@ -430,10 +428,14 @@ with open(output_file, mode="w", newline="") as file:
             order_quantity = random.randint(1, min(MAX_QTY, max_available))
             remaining_stock[product_id] -= order_quantity
 
-            # Use inventory price for the product when available, otherwise fallback
+            # CRITICAL: Use inventory price for the product — must exist in product_price mapping
+            # This ensures price consistency between inventory.csv and sales_table.csv
             price = product_price.get(product_id)
             if price is None:
-                price = round(random.uniform(MIN_PRICE, MAX_PRICE), 2)
+                # Skip transaction if product not found in inventory (should not happen)
+                print(f"WARNING: Product {product_id} not found in inventory. Skipping transaction.")
+                continue
+            
             sale_amount = round(order_quantity * price, 2)
 
             writer.writerow([
@@ -454,12 +456,32 @@ print(f"   - Total products with sales: {len(products_sold)} / {len(active_produ
 print(f"   - Products with NO sales: {len(active_products) - len(products_sold)}")
 print(f"   - No top-ups applied (all transactions fit within initial inventory)")
 
-# RECONCILIATION: Ensure inventory.csv matches total orders in sales_table.csv
-print("\n Running reconciliation to ensure inventory consistency...")
+# RECONCILIATION: Ensure inventory.csv matches total orders in sales_table.csv and prices are consistent
+print("\n Running reconciliation to ensure inventory and price consistency...")
 try:
     sales_df = pd.read_csv(output_file)
     inventory_df_check = pd.read_csv(OUTPUT_FILE)  # Reload fresh from disk
     
+    # 1. Validate price consistency: All sales prices must match inventory prices
+    print("   Checking price consistency...")
+    merged_prices = sales_df[['product_id', 'price']].merge(
+        inventory_df_check[['product_id', 'price']].rename(columns={'price': 'inventory_price'}),
+        on='product_id',
+        how='left'
+    )
+    
+    price_mismatches = merged_prices[merged_prices['price'] != merged_prices['inventory_price']]
+    
+    if len(price_mismatches) > 0:
+        print(f"   ERROR: Found {len(price_mismatches)} price mismatches between sales and inventory!")
+        print("   This should not happen — all sales prices MUST match inventory prices.")
+        print("   Mismatch details:")
+        print(price_mismatches.head(10))
+    else:
+        print("   ✓ All sales prices match inventory prices exactly!")
+    
+    # 2. Validate quantity consistency
+    print("   Checking inventory quantity consistency...")
     # Calculate total ordered per product
     summary = sales_df.groupby('product_id')['order_quantity'].sum().reset_index()
     summary.columns = ['product_id', 'total_ordered']
@@ -472,7 +494,7 @@ try:
     oversold = merged[merged['total_ordered'] > merged['quantity']].copy()
     
     if len(oversold) > 0:
-        print(f"Found {len(oversold)} oversold products. Adjusting inventory...")
+        print(f"   ERROR: Found {len(oversold)} oversold products. Adjusting inventory...")
         
         # Update inventory quantities to match total ordered
         for idx, row in oversold.iterrows():
@@ -484,19 +506,23 @@ try:
         inventory_df_check.to_csv(OUTPUT_FILE, index=False)
         
         total_adjusted = oversold['total_ordered'].sum() - oversold['quantity'].sum()
-        print(f"Inventory reconciled: {len(oversold)} products adjusted (+{total_adjusted:,} units)")
+        print(f"   ✓ Inventory reconciled: {len(oversold)} products adjusted (+{total_adjusted:,} units)")
     else:
-        print(f"No oversold products found. Inventory is consistent!")
+        print(f"   ✓ No oversold products found. Inventory is consistent!")
         
 except Exception as e:
     print(f"Reconciliation warning: {e}")
 
-# Inventory generation in en_US locale
+# NOTE: The inventory.csv is now correctly synchronized with sales_table.csv
+# Do NOT regenerate inventory.csv after sales generation — it will break price consistency!
+
 def main():
+    # Legacy function — kept for reference only
+    # In the current flow, inventory and sales are generated together
     rows = generate_rows(NUMBER_ROWS)
     write_csv(OUTPUT_FILE, rows)
     print(f"Generated {NUMBER_ROWS} rows with {NUM_SUPPLIERS} unique shuffled supplier_ids to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
-    main()
+    pass  # Main execution completes above
 

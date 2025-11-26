@@ -1,51 +1,51 @@
 supplier_id,company_name,street,house_number,zip_code,state,company_type,company_size
-SUP0001,Henschel Hamann OHG mbH,Hans-Erich-Wohlgemut-Straße,139,27777,Hessen,Retailer,Medium
-SUP0002,Bruder GmbH & Co. KG,Valentine-Kruschwitz-Straße,1,70703,Saarland,Service Provider,Medium
-SUP0003,Hellwig GmbH,Metin-Schmiedecke-Ring,188,98424,Berlin,Distributor,Small
-SUP0004,Bender,Zorbachweg,159,02740,Sachsen-Anhalt,Retailer,Large
-SUP0005,Zänker Werner GmbH,Stanislav-Metz-Straße,62,59062,Baden-Württemberg,Retailer,Large
-SUP0006,Henschel Stiftung & Co. KG,Grein Grothallee,17,64614,Schleswig-Holstein,Service Provider,Medium
-SUP0007,Jopich Scheibe GmbH & Co. KGaA,Egbert-Preiß-Platz,49,98491,Niedersachsen,Service Provider,Large
-SUP0008,Trapp,Beerstr.,128,50493,Bremen,Service Provider,Small
-SUP0009,Wohlgemut Mälzer GmbH,Ferenc-Eigenwillig-Allee,157,94612,Brandenburg,Retailer,Medium
-SUP0010,Trupp KG,Gertrude-Döhn-Ring,105,85340,Baden-Württemberg,Retailer,Small
-SUP0011,Briemer,Hedy-Mende-Straße,25,23984,Thüringen,Service Provider,Large
-SUP0012,Gerlach Schweitzer AG & Co. KGaA,Kruschwitzweg,18,87188,Bremen,Manufacturer,Small
-SUP0013,Haase GmbH & Co. KG,Bohlanderring,46,16806,Berlin,Manufacturer,Small
-SUP0014,Gute,Ruppertweg,28,64799,Niedersachsen,Wholesaler,Small
-SUP0015,Barth Weller OHG mbH,Pieperstraße,26,94963,Mecklenburg-Vorpommern,Manufacturer,Large
-SUP0016,Scholl GmbH & Co. KG,Hans-Wolfgang-Kroker-Gasse,165,80926,Berlin,Wholesaler,Large
-SUP0017,Kühnert Eigenwillig AG,Severin-Junitz-Ring,126,78645,Thüringen,Service Provider,Large
-SUP0018,Preiß,Junitzring,180,75124,Thüringen,Service Provider,Medium
-SUP0019,Höfig Adolph AG,Reginald-Pruschke-Straße,13,86824,Bayern,Retailer,Small
-SUP0020,Boucsein Liebelt GmbH,Hermighausenring,156,22444,Berlin,Manufacturer,Small
-SUP0021,Schacht,Hübelgasse,54,33868,Sachsen-Anhalt,Wholesaler,Small
-SUP0022,Peukert e.G.,Marzena-Junck-Straße,120,17036,Hessen,Manufacturer,Medium
-SUP0023,Scholtz GmbH,Fliegnerplatz,143,02050,Mecklenburg-Vorpommern,Wholesaler,Medium
-SUP0024,Schlosser e.G.,Weinholdgasse,182,49096,Berlin,Manufacturer,Large
-SUP0025,Mülichen,Ruppertstraße,69,45284,Brandenburg,Service Provider,Small
-SUP0026,Klotz GmbH,Putzgasse,188,50735,Sachsen,Manufacturer,Medium
-SUP0027,Noack,Pechelgasse,20,73940,Rheinland-Pfalz,Distributor,Large
-SUP0028,Schottin,Fridolin-Sontag-Straße,25,29442,Bayern,Manufacturer,Large
-SUP0029,Conradi GmbH,Mehmet-Pölitz-Ring,60,73420,Mecklenburg-Vorpommern,Service Provider,Medium
-SUP0030,Rose Stiftung & Co. KGaA,Stadelmannstraße,49,48675,Saarland,Distributor,Large
-SUP0031,Sontag GmbH,Anika-Löffler-Allee,169,82308,Bremen,Distributor,Large
-SUP0032,Juncken,Textorstr.,161,19623,Mecklenburg-Vorpommern,Distributor,Large
-SUP0033,Lorch AG,Ullmannstr.,192,94276,Thüringen,Service Provider,Medium
-SUP0034,Plath Häring AG,Gröttnerweg,192,66293,Berlin,Manufacturer,Large
-SUP0035,Davids Radisch e.V.,Waldemar-Reuter-Weg,148,42655,Nordrhein-Westfalen,Retailer,Large
-SUP0036,Scholtz Rogge KG,Sybille-Linke-Platz,118,27237,Brandenburg,Wholesaler,Small
-SUP0037,Scholz Paffrath KG,Gereon-Geißler-Platz,43,90065,Niedersachsen,Distributor,Large
-SUP0038,Riehl,Blümelweg,103,77954,Berlin,Service Provider,Medium
-SUP0039,Zorbach,Linkestraße,169,53981,Bayern,Distributor,Large
-SUP0040,Weiß Häring GmbH & Co. KG,Nikolaos-Säuberlich-Gasse,154,79089,Nordrhein-Westfalen,Wholesaler,Medium
-SUP0041,Pergande Schlosser e.G.,Geiselstraße,81,84887,Sachsen-Anhalt,Service Provider,Medium
-SUP0042,Pruschke AG,Veronique-Bachmann-Allee,96,61239,Sachsen,Wholesaler,Large
-SUP0043,Dörr,Erdal-Schüler-Allee,111,51881,Bremen,Retailer,Large
-SUP0044,Seifert,Sölzerallee,62,82070,Sachsen,Service Provider,Large
-SUP0045,Trubin Wesack KG,Pascale-Drubin-Gasse,55,92372,Bremen,Wholesaler,Large
-SUP0046,Röhrdanz auch Schlauchin GbR,Karl-Trapp-Weg,191,49703,Rheinland-Pfalz,Retailer,Medium
-SUP0047,Linke GmbH & Co. KGaA,Miesstr.,116,83355,Schleswig-Holstein,Wholesaler,Medium
-SUP0048,Neuschäfer GmbH & Co. KG,Joanna-Ditschlerin-Platz,1,15550,Rheinland-Pfalz,Manufacturer,Medium
-SUP0049,Stey Beckmann GmbH,Franka-Davids-Weg,153,99384,Niedersachsen,Manufacturer,Large
-SUP0050,Beyer Jockel GmbH,Eggert-Buchholz-Ring,35,47012,Mecklenburg-Vorpommern,Retailer,Small
+SUP0001,Schleich Steckel GmbH,Wilhelmine-Reichmann-Weg,61,38447,Niedersachsen,Wholesaler,Large
+SUP0002,Zahn AG,Gutestr.,13,81460,Hamburg,Service Provider,Large
+SUP0003,Butte,Pascal-Adolph-Weg,18,40253,Saarland,Wholesaler,Small
+SUP0004,Hoffmann,Handestraße,182,53528,Mecklenburg-Vorpommern,Service Provider,Large
+SUP0005,Kade OHG mbH,Sölzerweg,61,37747,Sachsen,Manufacturer,Large
+SUP0006,Buchholz Baum AG,Heinz-Otto-Baum-Allee,191,49336,Hessen,Manufacturer,Small
+SUP0007,Hesse,Wernergasse,100,86472,Sachsen-Anhalt,Service Provider,Large
+SUP0008,Tschentscher e.V.,Anastasios-Henschel-Ring,120,62857,Niedersachsen,Distributor,Large
+SUP0009,Huhn GmbH,Vollbrechtring,108,55362,Thüringen,Distributor,Large
+SUP0010,Dussen van,Agatha-Steckel-Weg,156,00339,Baden-Württemberg,Wholesaler,Medium
+SUP0011,Wiek Gorlitz GmbH,Katarzyna-Striebitz-Platz,198,48218,Sachsen,Distributor,Medium
+SUP0012,Geißler GmbH & Co. KG,Norbert-Hettner-Allee,18,14709,Nordrhein-Westfalen,Retailer,Medium
+SUP0013,Döhn Wiek GmbH,Tamara-Eimer-Gasse,187,71777,Bayern,Retailer,Medium
+SUP0014,Ehlert Barkholz e.G.,Sontagallee,2,49281,Brandenburg,Manufacturer,Large
+SUP0015,Dietz,Deborah-Radisch-Gasse,42,63141,Sachsen,Retailer,Large
+SUP0016,Lachmann,Fredo-Dobes-Gasse,170,97174,Thüringen,Retailer,Small
+SUP0017,Kade,Eigenwilligstraße,151,24497,Saarland,Service Provider,Small
+SUP0018,Naser GmbH,Waltraut-Pergande-Allee,165,18440,Rheinland-Pfalz,Manufacturer,Small
+SUP0019,Hartung Geisel KG,Rörrichtallee,86,43868,Bremen,Retailer,Medium
+SUP0020,Hölzenbecher Siering KG,Lorenz-Bohlander-Weg,109,85287,Brandenburg,Retailer,Medium
+SUP0021,Warmer,Paula-Scholz-Weg,91,39417,Mecklenburg-Vorpommern,Distributor,Small
+SUP0022,Bien GmbH,Beckmannplatz,196,24722,Rheinland-Pfalz,Manufacturer,Small
+SUP0023,Sager auch Schlauchin AG & Co. KG,Seifertgasse,160,10050,Baden-Württemberg,Manufacturer,Small
+SUP0024,Möchlichen,Etzoldallee,142,32449,Niedersachsen,Service Provider,Small
+SUP0025,Ackermann AG,Fechnerallee,175,55147,Hessen,Retailer,Medium
+SUP0026,Walter Karge Stiftung & Co. KGaA,Holger-Mälzer-Weg,124,61023,Hamburg,Manufacturer,Large
+SUP0027,Wernecke GmbH & Co. KGaA,Müllerplatz,81,30930,Nordrhein-Westfalen,Wholesaler,Small
+SUP0028,Geisel,Reichmannstr.,38,62464,Nordrhein-Westfalen,Retailer,Large
+SUP0029,Heinrich,Schäfergasse,158,08082,Saarland,Service Provider,Large
+SUP0030,Stadelmann,Elsa-Dippel-Ring,76,05669,Rheinland-Pfalz,Retailer,Medium
+SUP0031,Lindau,Pechelstr.,137,67115,Hamburg,Manufacturer,Medium
+SUP0032,Anders AG & Co. OHG,Ladeckring,75,02820,Mecklenburg-Vorpommern,Wholesaler,Small
+SUP0033,Stoll,Wohlgemutstraße,191,30525,Mecklenburg-Vorpommern,Manufacturer,Small
+SUP0034,Hornich e.G.,Junkenstraße,132,61410,Saarland,Retailer,Medium
+SUP0035,Niemeier Schleich Stiftung & Co. KGaA,Pergandeweg,17,84014,Bremen,Distributor,Medium
+SUP0036,Ruppersberger,Hofmannplatz,140,93966,Saarland,Wholesaler,Medium
+SUP0037,Mielcarek AG & Co. OHG,Karolin-Neuschäfer-Platz,87,73733,Hessen,Retailer,Small
+SUP0038,Thanel,Yvonne-Langern-Allee,181,54107,Rheinland-Pfalz,Manufacturer,Small
+SUP0039,Walter GbR,Nils-Sorgatz-Straße,8,72015,Bayern,Service Provider,Large
+SUP0040,Weinhage Hermighausen GmbH,Annekatrin-Wähner-Ring,54,32317,Brandenburg,Wholesaler,Large
+SUP0041,Wagner,Pölitzallee,150,03377,Hamburg,Retailer,Large
+SUP0042,Stoll Bachmann e.V.,Gereon-Etzold-Ring,181,89098,Brandenburg,Distributor,Medium
+SUP0043,Austermühle,Beyerstraße,179,32049,Mecklenburg-Vorpommern,Distributor,Small
+SUP0044,Siering e.G.,Wulffgasse,131,88993,Saarland,Distributor,Small
+SUP0045,Schäfer,Anja-Hamann-Ring,30,75565,Brandenburg,Manufacturer,Medium
+SUP0046,Dowerg,Nuri-Löffler-Weg,184,51348,Niedersachsen,Manufacturer,Large
+SUP0047,Lindau,Krausring,80,78016,Bayern,Manufacturer,Medium
+SUP0048,Biggen Klemm OHG mbH,Athanasios-Wähner-Allee,50,16528,Schleswig-Holstein,Distributor,Large
+SUP0049,Nohlmans Juncken KGaA,Hans Josef-Paffrath-Gasse,98,05011,Rheinland-Pfalz,Service Provider,Large
+SUP0050,Nette,Melita-Heydrich-Platz,177,05218,Bayern,Wholesaler,Large
