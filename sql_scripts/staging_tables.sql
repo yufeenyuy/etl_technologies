@@ -1,4 +1,4 @@
--- SQL script to create staging tables
+-- SQL script to create tables in staging area
 
 -- Table: customer
 create table if not exists customer (
