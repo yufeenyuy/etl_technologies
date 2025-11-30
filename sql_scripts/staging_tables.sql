@@ -1,5 +1,6 @@
-set search_path to etl;
+-- SQL script to create staging tables
 
+-- Table: customer
 create table if not exists customer (
 	customer_id varchar,
 	first_name varchar,
@@ -12,7 +13,7 @@ create table if not exists customer (
 	state varchar
 );
 
-
+-- Table: inventory
 create table if not exists inventory (
 	supplier_product_id int4,
 	supplier_product_category varchar,
@@ -28,8 +29,7 @@ create table if not exists inventory (
 	price float4
 );
 
-
-
+-- Table: sales
 create table if not exists sales (
 	transaction_id varchar,
 	customer_id varchar,
@@ -41,7 +41,7 @@ create table if not exists sales (
 );
 
 
-
+--- Table: supplier
 create table if not exists supplier (
 	supplier_id varchar,
 	company_name varchar,
@@ -54,7 +54,7 @@ create table if not exists supplier (
 );
 
 
-
+--- Table: user_interactions
 create table if not exists user_interactions(
 session varchar,
 logtime timestamp,

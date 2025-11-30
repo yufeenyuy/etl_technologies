@@ -1,5 +1,6 @@
-set search_path to coredwh;
+-- SQL script to create data warehouse tables
 
+-- Table: customer
 create table if not exists customer(
 customer_id varchar primary key,
 first_name varchar not null,
@@ -12,7 +13,7 @@ city varchar,
 state varchar
 );
 
-
+-- Table: supplier
 create table if not exists supplier(
 supplier_id varchar primary key,
 company_name varchar not null,
@@ -24,7 +25,7 @@ company_type varchar not null,
 company_size varchar
 );
 
-
+-- Table: supplier_product including foreign key to supplier
 create table if not exists supplier_product(
 supplier_product_id int4 primary key,
 supplier_id varchar not null,
@@ -36,7 +37,7 @@ price float,
 foreign key(supplier_id) references supplier on delete set null on update cascade
 );
 
-
+-- Table: product including foreign keys to supplier and supplier_product
 create table if not exists product(
 product_id varchar primary key,
 product_name varchar not null,
@@ -50,7 +51,7 @@ foreign key(supplier_id) references supplier on delete set null on update cascad
 foreign key(supplier_product_id) references supplier_product on delete set null on update cascade 
 );
 
-
+-- Table: sales including foreign keys to customer and product
 create table if not exists sales(
 transaction_id varchar primary key,
 customer_id varchar not null,
@@ -63,7 +64,7 @@ foreign key(customer_id) references customer on delete set null on update cascad
 foreign key(product_id) references product on delete set null on update cascade
 );
 
-
+-- Table: customer_interactions including foreign key to customer
 create table if not exists customer_interactions(
 session varchar primary key,
 logtime timestamp not null,
